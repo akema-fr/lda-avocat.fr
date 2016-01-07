@@ -54,6 +54,9 @@ $shadow-color: #666;
     font-weight: normal;
   }
 }
+.ui.slide {
+  min-height: 50vh;
+}
 
 .ui.vertical {
   &.segment {
@@ -134,9 +137,11 @@ $shadow-color: #666;
   background-size: cover;
 }
 
-#présentation + section {}
+#présentation + section {
+}
 
-#compétences + section {
+#nos-compétences {
+  section {
   $logo-height: 200px;
 
   & .card > .image > a {
@@ -144,16 +149,9 @@ $shadow-color: #666;
     height: $logo-height;
   }
 }
-
-#honoraires + section {
-  padding-top: $vertical-stripe-padding / 2;
-
-  .piled.segment {
-    margin: ($vertical-stripe-padding / 4) 0;
-  }
 }
 
-#l-équipe + section {
+#l-équipe {
   $avatar-height: 200px;
 
   & .card .content > .circular.image {
@@ -162,6 +160,16 @@ $shadow-color: #666;
   & .card > .image > a {
     box-shadow: 8px 8px 8px #ccc;
     @extend .center-avatar;
+  }
+}
+
+#nos-honoraires {
+  .piled.segment {
+    margin: ($vertical-stripe-padding / 4) 0;
+  }
+  p + ul {
+    margin-top: 0;
+    padding-left: 2rem;
   }
 }
 
