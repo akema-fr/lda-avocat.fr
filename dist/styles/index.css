@@ -1,0 +1,178 @@
+@charset "UTF-8";
+.uppercase {
+  text-transform: uppercase; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.capitalize, .titlecase {
+  text-transform: capitalize; }
+
+.smallcaps {
+  font-variant: small-caps; }
+
+blockquote {
+  font-size: 1em;
+  font-style: italic; }
+  blockquote:before {
+    font-family: 'Icons';
+    content: "\f10d";
+    font-size: 3rem;
+    font-style: normal;
+    float: left;
+    color: #DCDDDE;
+    margin-left: -3rem;
+    margin-top: 1rem;
+    padding-right: 1rem; }
+
+ul.ui.list.without-bullet {
+  margin-left: 0; }
+
+ul.ui.list.without-bullet li::before {
+  list-style-type: none;
+  content: ''; }
+
+.ui.mini.text {
+  font-size: 0.64285714em;
+  line-height: 1.5em; }
+
+.ui.tiny.text {
+  font-size: 0.71428571em;
+  line-height: 1.5em; }
+
+.ui.small.text {
+  font-size: 0.78571429em;
+  line-height: 1.5em; }
+
+.ui.text {
+  font-size: 0.85714286em;
+  line-height: 1.5em; }
+
+.ui.large.text {
+  font-size: 1em;
+  line-height: 1.5em; }
+
+.ui.big.text {
+  font-size: 1.28571429em;
+  line-height: 1.5em; }
+
+.ui.huge.text {
+  font-size: 1.42857143em;
+  line-height: 1.5em; }
+
+.ui.massive.text {
+  font-size: 1.71428571em;
+  line-height: 1.5em; }
+
+.hidden.menu {
+  display: none; }
+
+.center-avatar, #nos-compétences section .card > .image > a, #l-équipe .card > .image > a {
+  display: flex;
+  align-items: center;
+  align-content: center; }
+
+.cards .no-border.card,
+.cards .no-border.card:hover,
+.link.cards .no-border.card:hover {
+  border-color: transparent;
+  box-shadow: 0 1px 3px 0 transparent, 0 0 0 1px transparent; }
+  .cards .no-border.card .image,
+  .cards .no-border.card:hover .image,
+  .link.cards .no-border.card:hover .image {
+    background-color: transparent; }
+
+.masthead .header {
+  text-shadow: 2px 2px 2px #666; }
+
+.masthead.segment {
+  min-height: 700px;
+  padding: 1em 0; }
+
+.masthead .logo.item img {
+  margin-right: 1em; }
+
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em; }
+
+.masthead h1.ui.header {
+  margin-top: 3em;
+  margin-bottom: 0;
+  font-size: 4em;
+  font-weight: normal; }
+
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal; }
+
+.ui.slide {
+  min-height: 50vh; }
+
+.ui.vertical.segment {
+  border-bottom: none; }
+
+.ui.vertical.stripe {
+  padding: 4em 0 8em; }
+  .ui.vertical.stripe h3 {
+    font-size: 2em; }
+  .ui.vertical.stripe .button + h3,
+  .ui.vertical.stripe p + h3 {
+    margin-top: 3em; }
+  .ui.vertical.stripe .floated.image {
+    clear: both; }
+  .ui.vertical.stripe p {
+    font-size: 1.33em; }
+  .ui.vertical.stripe .horizontal.divider {
+    margin: 3em 0; }
+
+.footer.segment {
+  padding: 5em 0; }
+  .footer.segment address {
+    font-style: normal; }
+
+.secondary.pointing.menu .toc.item {
+  display: none; }
+
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important; }
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none; }
+  .secondary.pointing.menu .toc.item {
+    display: block; }
+  .masthead.segment {
+    min-height: 350px; }
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em; }
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em; } }
+
+#demarrez {
+  background: url(/assets/img/backgrounds/masthead.jpg);
+  background-size: cover; }
+
+#nos-compétences section .card > .image > a {
+  height: 200px; }
+
+#l-équipe .card .content > .circular.image {
+  margin-bottom: 1rem; }
+
+#l-équipe .card > .image > a {
+  box-shadow: 8px 8px 8px #ccc; }
+
+#nos-honoraires .piled.segment {
+  margin: 2em 0; }
+
+#nos-honoraires p + ul {
+  margin-top: 0;
+  padding-left: 2rem; }
+
+#contact .icon {
+  display: inline-block; }
+
+#contact .horizontally.flipped.copyright {
+  padding-right: 0;
+  padding-left: .28571429em; }
