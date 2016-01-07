@@ -33,3 +33,47 @@ blockquote {
   font-size: 1em;
   font-style: italic;
 }
+ul.ui.list.without-bullet li::before {
+  list-style-type: none;
+  content: '';
+}
+
+.ui.mini.text {
+  font-size: 0.64285714em;
+  line-height: 1.5em;
+}
+
+.ui.tiny.text {
+  font-size: 0.71428571em;
+  line-height: 1.5em;
+}
+
+.ui.small.text {
+  font-size: 0.78571429em;
+  line-height: 1.5em;
+}
+
+.ui.text {
+  font-size: 0.85714286em;
+  line-height: 1.5em;
+}
+
+.ui.large.text {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.ui.big.text {
+  font-size: 1.28571429em;
+  line-height: 1.5em;
+}
+
+.ui.huge.text {
+  font-size: 1.42857143em;
+  line-height: 1.5em;
+}
+
+.ui.massive.text {
+  font-size: 1.71428571em;
+  line-height: 1.5em;
+}
