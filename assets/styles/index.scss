@@ -160,6 +160,7 @@ $shadow-color: #666;
     margin-bottom: 1rem;
   }
   & .card > .image > a {
+    box-shadow: 8px 8px 8px #ccc;
     @extend .center-avatar;
   }
 }
