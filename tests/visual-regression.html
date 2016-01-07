@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regression Runner</title>
+    <meta charset="utf-8"/>
+
+    <script src="../node_modules/csscritic/csscritic.js"></script>
+
+    <script>
+        window.onload = function () {
+            var hosts = {
+                'prod': 'http://lda-avocat.fr',
+                'dev': 'http://localhost:5000'
+            };
+            var server = hosts[getParameterByName('mode') || 'dev'];
+            var loadPages = {
+                home: server + '/'
+            };
+            console.info('Testing visual regression for: ' + loadPages['home']);
+
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+                var results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+
+            csscritic
+                    .addReporter(csscritic.NiceReporter())
+                    .component('Home')
+                    // bootstrap resolutions
+                    .add({url: loadPages['home'], width: 544, height: 800, description: 'Small screen / phone'})
+                    .add({url: loadPages['home'], width: 768, height: 800, description: 'Medium screen / tablet'})
+                    .add({url: loadPages['home'], width: 992, height: 800, description: 'Large screen / desktop'})
+                    .add({ url: loadPages['home'], width: 1200, height: 800, description: 'Extra large screen / wide desktop'})
+                    // w3counter resolutions: https://www.w3counter.com/globalstats.php
+                    .add({url: loadPages['home'], width: 1366, height: 768, description: 'Landscape (1366x768)'})
+                    .add({url: loadPages['home'], width: 360, height: 640, description: 'Portrait (360x640)'})
+                    .add({url: loadPages['home'], width: 768, height: 1024, description: 'Portrait (768x1024)'})
+                    .add({url: loadPages['home'], width: 1024, height: 768, description: 'Landscape (1024x768)'})
+                    .add({url: loadPages['home'], width: 320, height: 568, description: 'Portrait (320x568)'})
+                    .execute();
+        };
+    </script>
+</head>
+<body>
+<button onclick="indexedDB.deleteDatabase('csscritic'); window.location.reload();">Reset all tests</button>
+</body>
+</html>

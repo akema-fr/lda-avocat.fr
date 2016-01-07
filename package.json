@@ -1,0 +1,60 @@
+{
+  "name": "lda-avocat.fr",
+  "version": "0.0.1",
+  "description": "LDA Société d’Avocat sur Bordeaux",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm-run-all clean prepare build:style build:app",
+    "build:app": "npm run copy:scripts",
+    "build:production": "npm prune && npm install && npm run lint && npm test && npm run build",
+    "build:style": "npm run build:semantic-ui; npm run build:style-custom; npm run copy:styles",
+    "build:style-custom": "node-sass -r assets/styles/index.scss dist/styles/index.css",
+    "build:semantic-ui": "gulp --gulpfile ./node_modules/semantic-ui/gulpfile.js build",
+    "copy:scripts": "copyfiles -u 3 node_modules/jquery/dist/jquery.min.js ./dist/scripts",
+    "copy:styles": "copyfiles -u 2 semantic/dist/{**/,}*  semantic/dist/**/icons.* ./dist/styles",
+    "clean": "rimraf ./dist/**/*",
+    "lint": "jshint app/**",
+    "prepare": "mkdir -p ./dist",
+    "prestart": "npm run build",
+    "screenshot": "node tests/screenshot.js",
+    "serve": "static -p ${PORT:-5000} --gzip --host-address 0.0.0.0 ./",
+    "start": "npm run serve",
+    "watch": "PORT=${PORT:-5000} npm-run-all --parallel serve watch:app",
+    "watch:style": "node-sass -w -r assets/styles/index.scss dist/styles/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LDA-avocat/lda-avocat.fr.git"
+  },
+  "keywords": [
+    "cabinet",
+    "avocat",
+    "bordeaux"
+  ],
+  "author": [
+    "Akema <elopez@akema.fr>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LDA-avocat/lda-avocat.fr/issues"
+  },
+  "homepage": "https://github.com/LDA-avocat/lda-avocat.fr#readme",
+  "devDependencies": {
+    "copyfiles": "0.2.x",
+    "csscritic": "https://github.com/cburgmer/csscritic.git",
+    "gulp": "3.9.x",
+    "jshint": "2.8.x",
+    "node-sass": "^3.4.2",
+    "node-static": "0.7.x",
+    "npm-run-all": "1.4.x",
+    "pageres": "3.0.x",
+    "rimraf": "2.4.x",
+    "semantic-ui": "2.1.x"
+  },
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "jshintConfig": {
+    "esnext": true
+  }
+}
