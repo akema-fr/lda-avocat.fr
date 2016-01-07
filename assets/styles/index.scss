@@ -1,0 +1,165 @@
+@import "sui-helpers";
+
+$vertical-stripe-padding: 8em;
+$shadow-offset: 2px;
+$shadow-blur: 2px;
+$shadow-color: #666;
+
+.hidden.menu {
+  display: none;
+}
+
+.center-avatar {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.cards .no-border.card,
+.cards .no-border.card:hover,
+.link.cards .no-border.card:hover {
+  border-color: transparent;
+  box-shadow: 0 1px 3px 0 transparent, 0 0 0 1px transparent;
+  & .image {
+    background-color: transparent;
+  }
+}
+
+.masthead {
+  & .header {
+    text-shadow: $shadow-offset $shadow-offset $shadow-blur $shadow-color;
+  }
+  &.segment {
+    min-height: 700px;
+    padding: 1em 0;
+  }
+
+  & .logo.item img {
+    margin-right: 1em;
+  }
+
+  & .ui.menu .ui.button {
+    margin-left: 0.5em;
+  }
+
+  & h1.ui.header {
+    margin-top: 3em;
+    margin-bottom: 0;
+    font-size: 4em;
+    font-weight: normal;
+  }
+
+  & h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+  }
+}
+
+.ui.vertical {
+  &.segment {
+    border-bottom: none;
+  }
+
+  &.stripe {
+    padding: ($vertical-stripe-padding / 2) 0 $vertical-stripe-padding;
+
+    & h3 {
+      font-size: 2em;
+    }
+
+    & .button + h3,
+    & p + h3 {
+      margin-top: 3em;
+    }
+
+    & .floated.image {
+      clear: both;
+    }
+
+    & p {
+      font-size: 1.33em;
+    }
+
+    & .horizontal.divider {
+      margin: 3em 0;
+    }
+  }
+}
+
+.footer.segment {
+  padding: 5em 0;
+  & address {
+    font-style: normal;
+  }
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important;
+  }
+
+  .secondary.pointing.menu {
+    & .item,
+    & .menu {
+      display: none;
+    }
+
+    & .toc.item {
+      display: block;
+    }
+  }
+  .masthead {
+    &.segment {
+      min-height: 350px;
+    }
+
+    & h1.ui.header {
+      font-size: 2em;
+      margin-top: 1.5em;
+    }
+
+    & h2 {
+      margin-top: 0.5em;
+      font-size: 1.5em;
+    }
+  }
+}
+
+#demarrez {
+  background: url(/assets/img/backgrounds/masthead.jpg);
+  background-size: cover;
+}
+
+#présentation + section {}
+
+#compétences + section {
+  $logo-height: 200px;
+
+  & .card > .image > a {
+    @extend .center-avatar;
+    height: $logo-height;
+  }
+}
+
+#honoraires + section {
+  padding-top: $vertical-stripe-padding / 2;
+
+  .piled.segment {
+    margin: ($vertical-stripe-padding / 4) 0;
+  }
+}
+
+#l-équipe + section {
+  $avatar-height: 200px;
+
+  & .card .content > .circular.image {
+    margin-bottom: 1rem;
+  }
+  & .card > .image > a {
+    @extend .center-avatar;
+  }
+}
