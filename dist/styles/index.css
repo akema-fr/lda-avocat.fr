@@ -152,7 +152,8 @@ ul.ui.list.without-bullet li::before {
 
 #demarrez {
   background: url(/assets/img/backgrounds/masthead.jpg);
-  background-size: cover; }
+  background-size: cover;
+  min-height: 75vh; }
 
 #nos-compétences section .card > .image > a {
   height: 200px; }

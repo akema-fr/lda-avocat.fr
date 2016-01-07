@@ -135,6 +135,7 @@ $shadow-color: #666;
 #demarrez {
   background: url(/assets/img/backgrounds/masthead.jpg);
   background-size: cover;
+  min-height: 75vh;
 }
 
 #présentation + section {
