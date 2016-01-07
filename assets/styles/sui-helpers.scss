@@ -1,0 +1,35 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.titlecase {
+  @extend .capitalize;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+}
+
+blockquote {
+  &:before {
+    font-family: 'Icons';
+    content: "\f10d";
+    font-size: 3rem;
+    font-style: normal;
+    float: left;
+    color: #DCDDDE;
+    margin-left: -3rem;
+    margin-top: 1rem;
+    padding-right: 1rem;
+  }
+  font-size: 1em;
+  font-style: italic;
+}
