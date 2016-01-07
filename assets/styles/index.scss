@@ -164,3 +164,13 @@ $shadow-color: #666;
     @extend .center-avatar;
   }
 }
+
+#contact {
+  .icon {
+    display: inline-block;
+  }
+  .horizontally.flipped.copyright {
+    padding-right: 0;
+    padding-left: .28571429em;
+  }
+}

@@ -33,6 +33,10 @@ blockquote {
   font-size: 1em;
   font-style: italic;
 }
+
+ul.ui.list.without-bullet {
+  margin-left: 0;
+}
 ul.ui.list.without-bullet li::before {
   list-style-type: none;
   content: '';
