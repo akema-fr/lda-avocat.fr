@@ -18,7 +18,9 @@
     "prestart": "npm run build",
     "screenshot": "node tests/screenshot.js",
     "serve": "static -p ${PORT:-5000} --gzip --host-address 0.0.0.0 ./",
+    "serve:online": " PORT=5002 npm-run-all start:tunnel serve",
     "start": "npm run serve",
+    "start:tunnel": "lt --port 5002 --subdomain ldaavocat &",
     "watch": "PORT=${PORT:-5000} npm-run-all --parallel serve watch:app",
     "watch:style": "node-sass -w -r assets/styles/index.scss dist/styles/index.css"
   },
