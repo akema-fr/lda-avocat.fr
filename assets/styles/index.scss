@@ -54,6 +54,7 @@ $shadow-color: #666;
     font-weight: normal;
   }
 }
+
 .ui.slide {
   min-height: 50vh;
 }
@@ -143,24 +144,29 @@ $shadow-color: #666;
 
 #nos-compétences {
   section {
-  $logo-height: 200px;
+    $logo-height: 200px;
 
-  & .card > .image > a {
-    @extend .center-avatar;
-    height: $logo-height;
+    & .card > .image > a {
+      @extend .center-avatar;
+      height: $logo-height;
+    }
   }
-}
 }
 
 #l-équipe {
-  $avatar-height: 200px;
+  $avatar-height: 175px;
 
-  & .card .content > .circular.image {
-    margin-bottom: 1rem;
-  }
-  & .card > .image > a {
-    box-shadow: 8px 8px 8px #ccc;
-    @extend .center-avatar;
+  & .card .content {
+    & > .circular.image {
+      margin-bottom: 1rem;
+      box-shadow: $shadow-offset*2 $shadow-offset*2 $shadow-blur*4 #ccc;
+    }
+    & > .circular.image img {
+      width: $avatar-height;
+    }
+    & > .image > a {
+      @extend .center-avatar;
+    }
   }
 }
 

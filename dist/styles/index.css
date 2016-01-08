@@ -67,7 +67,7 @@ ul.ui.list.without-bullet li::before {
 .hidden.menu {
   display: none; }
 
-.center-avatar, #nos-compétences section .card > .image > a, #l-équipe .card > .image > a {
+.center-avatar, #nos-compétences section .card > .image > a, #l-équipe .card .content > .image > a {
   display: flex;
   align-items: center;
   align-content: center; }
@@ -159,10 +159,11 @@ ul.ui.list.without-bullet li::before {
   height: 200px; }
 
 #l-équipe .card .content > .circular.image {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px 8px #ccc; }
 
-#l-équipe .card > .image > a {
-  box-shadow: 8px 8px 8px #ccc; }
+#l-équipe .card .content > .circular.image img {
+  width: 175px; }
 
 #nos-honoraires .piled.segment {
   margin: 2em 0; }
