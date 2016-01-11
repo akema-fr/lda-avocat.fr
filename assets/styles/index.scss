@@ -25,6 +25,18 @@ $shadow-color: #666;
   }
 }
 
+
+body.pushable > .pusher.pattern {
+  background: #E2E2E2 url(/assets/img/backgrounds/textured_paper.min.jpg);
+
+  & .ui.card, & .ui.cards > .card {
+    background-color: transparent;
+    & .circular img {
+      background-color: #fff;
+    }
+  }
+}
+
 .masthead {
   & .header {
     text-shadow: $shadow-offset $shadow-offset $shadow-blur $shadow-color;
