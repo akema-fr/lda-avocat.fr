@@ -4,6 +4,8 @@ $vertical-stripe-padding: 8em;
 $shadow-offset: 2px;
 $shadow-blur: 2px;
 $shadow-color: #666;
+$bordeaux-color: #EE2B45;
+
 
 .hidden.menu {
   display: none;
@@ -25,6 +27,13 @@ $shadow-color: #666;
   }
 }
 
+.divider.header .icon {
+    padding-right: .25em;
+}
+
+.ui.header.bordeaux {
+  color: $bordeaux-color;
+}
 
 body.pushable > .pusher.pattern {
   background: #E2E2E2 url(/assets/img/backgrounds/textured_paper.min.jpg);
@@ -146,7 +155,7 @@ body.pushable > .pusher.pattern {
 }
 
 #demarrez {
-  background: url(/assets/img/backgrounds/masthead.jpg);
+  background: url(/assets/img/backgrounds/masthead.min.jpg);
   background-size: cover;
   min-height: 75vh;
 }
