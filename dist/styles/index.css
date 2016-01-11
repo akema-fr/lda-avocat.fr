@@ -25,12 +25,29 @@ blockquote {
     margin-top: 1rem;
     padding-right: 1rem; }
 
-ul.ui.list.without-bullet {
+.ui.list.without-bullet {
   margin-left: 0; }
 
-ul.ui.list.without-bullet li::before {
+.ui.list.without-bullet li::before {
   list-style-type: none;
   content: ''; }
+
+.ui.definitions dt, .ui.definitions .label {
+  font-weight: bold; }
+
+.ui.definitions.horizontal {
+  display: inline-block; }
+  .ui.definitions.horizontal dt, .ui.definitions.horizontal .label {
+    float: left;
+    clear: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 5em; }
+    .ui.definitions.horizontal dt + dd, .ui.definitions.horizontal dt + .value,
+    .ui.definitions.horizontal dt ~ dd, .ui.definitions.horizontal dt ~ .value, .ui.definitions.horizontal .label + dd, .ui.definitions.horizontal .label + .value,
+    .ui.definitions.horizontal .label ~ dd, .ui.definitions.horizontal .label ~ .value {
+      margin-left: 5.5em; }
 
 .ui.mini.text {
   font-size: 0.64285714em;
@@ -82,6 +99,19 @@ ul.ui.list.without-bullet li::before {
   .link.cards .no-border.card:hover .image {
     background-color: transparent; }
 
+.divider.header .icon {
+  padding-right: .25em; }
+
+.ui.header.bordeaux {
+  color: #EE2B45; }
+
+body.pushable > .pusher.pattern {
+  background: #E2E2E2 url(/assets/img/backgrounds/textured_paper.min.jpg); }
+  body.pushable > .pusher.pattern .ui.card, body.pushable > .pusher.pattern .ui.cards > .card {
+    background-color: transparent; }
+    body.pushable > .pusher.pattern .ui.card .circular img, body.pushable > .pusher.pattern .ui.cards > .card .circular img {
+      background-color: #fff; }
+
 .masthead .header {
   text-shadow: 2px 2px 2px #666; }
 
@@ -106,6 +136,7 @@ ul.ui.list.without-bullet li::before {
   font-weight: normal; }
 
 .ui.slide {
+  text-shadow: 1px 1px 1px #fff;
   min-height: 50vh; }
 
 .ui.vertical.segment {
@@ -151,7 +182,7 @@ ul.ui.list.without-bullet li::before {
     font-size: 1.5em; } }
 
 #demarrez {
-  background: url(/assets/img/backgrounds/masthead.jpg);
+  background: url(/assets/img/backgrounds/masthead.min.jpg);
   background-size: cover;
   min-height: 75vh; }
 

@@ -34,12 +34,36 @@ blockquote {
   font-style: italic;
 }
 
-ul.ui.list.without-bullet {
+.ui.list.without-bullet {
   margin-left: 0;
 }
-ul.ui.list.without-bullet li::before {
+
+.ui.list.without-bullet li::before {
   list-style-type: none;
   content: '';
+}
+
+.ui.definitions {
+  dt, .label {
+    font-weight: bold;
+  }
+  &.horizontal {
+    $dl-horizontal-offset: 5em;
+    display: inline-block;
+
+    dt, .label {
+      float: left;
+      clear: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: $dl-horizontal-offset;
+      & + dd, & + .value,
+      & ~ dd, & ~ .value {
+        margin-left: ($dl-horizontal-offset + .5em);
+      }
+    }
+  }
 }
 
 .ui.mini.text {
