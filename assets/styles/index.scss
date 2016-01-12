@@ -49,7 +49,7 @@ body.pushable > .pusher.pattern {
 
 .masthead {
   & .header {
-    text-shadow: $shadow-offset $shadow-offset $shadow-blur $shadow-color;
+    text-shadow: $shadow-offset/1 $shadow-offset/1 $shadow-blur $shadow-color;
   }
   &.segment {
     min-height: 700px;
@@ -168,7 +168,11 @@ body.pushable > .pusher.pattern {
   min-height: 75vh;
 }
 
-#présentation + section {
+#présentation {
+  & blockquote:before {
+    color: $shadow-color;
+    text-shadow: $shadow-offset $shadow-offset $shadow-blur $avatar-bg-color;
+  }
 }
 
 #nos-compétences {
