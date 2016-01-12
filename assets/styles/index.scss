@@ -185,7 +185,8 @@ body.pushable > .pusher.pattern {
 #l-équipe {
   $avatar-height: 175px;
 
-  & .card .content {
+  & .card {
+  & .content {
     & > .circular.image {
       margin-bottom: 1rem;
       box-shadow: $shadow-offset*2 $shadow-offset*2 $shadow-blur*4 #ccc;
@@ -196,6 +197,7 @@ body.pushable > .pusher.pattern {
     & > .image > a {
       @extend .center-avatar;
     }
+  }
   }
 }
 
