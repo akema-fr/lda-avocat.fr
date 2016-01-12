@@ -5,7 +5,7 @@ $shadow-offset: 2px;
 $shadow-blur: 2px;
 $shadow-color: #666;
 $bordeaux-color: #EE2B45;
-
+$text-shadow: #fff;
 
 .hidden.menu {
   display: none;
@@ -77,8 +77,11 @@ body.pushable > .pusher.pattern {
 }
 
 .ui.slide {
-  text-shadow: 1px 1px 1px #fff;
   min-height: 50vh;
+
+  &:nth-child(n+2) {
+    text-shadow: 1px 1px 1px #fff;
+  }
 }
 
 .ui.vertical {
