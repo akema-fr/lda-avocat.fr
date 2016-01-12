@@ -82,6 +82,9 @@ body.pushable > .pusher.pattern {
 
   &:nth-child(n+2) {
     text-shadow: 1px 1px 1px #fff;
+    .label {
+      text-shadow: none;
+    }
   }
 }
 
