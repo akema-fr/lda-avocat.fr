@@ -3,7 +3,6 @@ semantic/
 tests/screenshots/*
 ressources-client/
 dist/styles/components
-dist/styles/themes
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Sass template
