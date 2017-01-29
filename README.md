@@ -18,6 +18,12 @@ N.B.: [`csscritic`](https://github.com/cburgmer/csscritic) require `libcairo-dev
 
 Open http://0.0.0.0:5000/.
 
+## Deploy
+
+Be sure to have a `semantic/` directory for the style then on `gh-pages` branch:
+
+    npm build
+    git push
 ## Tests
 
 ### Visual regression testing (`csscritic`)
@@ -27,8 +33,6 @@ Open http://0.0.0.0:5000/.
     * you can specify `prod` or `dev` as a query string parameter in the URL ;
 2. wait… as screenshots are taken ;
 3. accept images as references if correct.
-
-## Deploy
 
 ### Take screenshots (`pageres`)
 
