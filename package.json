@@ -23,7 +23,8 @@
     "start:tunnel": "lt --port 5002 --subdomain ldaavocat || npm run notify-about:tunnel &",
     "notify-about:tunnel": "notify -t \"Warning: LocalTunnel Down\" -m \"Restart required.\\n \\$ npm run serve:online\"",
     "watch": "PORT=5000 npm-run-all --parallel serve watch:app",
-    "watch:style": "node-sass -w -r assets/styles/index.scss dist/styles/index.css"
+    "watch:style": "node-sass -w -r assets/styles/index.scss dist/styles/index.css",
+    "postinstall": "cd node_modules/semantic-ui/; npm install"
   },
   "repository": {
     "type": "git",
